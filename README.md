@@ -77,4 +77,4 @@ The packages will be used in the next versions
 
 If you encounter any issues or have questions, feel free to reach out to me at [ertugrul.cakicii@gmail.com](mailto:ertugrul.cakicii@gmail.com).
 
-##[ Click for detailed documentation and future versions](https://shimmer-respect-cc3.notion.site/Booking-Manager-Documentation-0f8c6fd376ad432e9df5889140dc4214?pvs=4 " Detailed App Documentation and Future Versions")
+## [ Click for detailed documentation and future versions](https://shimmer-respect-cc3.notion.site/Booking-Manager-Documentation-0f8c6fd376ad432e9df5889140dc4214?pvs=4 " Detailed App Documentation and Future Versions")
