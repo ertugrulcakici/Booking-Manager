@@ -13,6 +13,24 @@ Booking Manager offers user-friendly, customizable, real-time session tracking a
 
 ### Screenshots
 
+<ul style="list-style: none;">
+<li>
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/add_session.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/add_worker.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/branch_settings.png" width="30%">
+  </li>
+  <li>
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/branch_workers.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/daily_statistics.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/daily_statistics_2.png" width="30%">
+    </li>
+    <li>
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/drawer.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/home_page.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/language.png" width="30%">
+</li>
+</ul>
+
 ### Dependencies
 
 To power the functionality of Booking Manager, the following dependencies have been utilized:
@@ -60,11 +78,11 @@ Follow these steps to set up your own Booking Manager application running on rem
 
 ### Usage
 
-...
+This content will be added soon
 
 ### Contributing
 
-...
+This content will be added soon
 
 ### Planning To Use
 
