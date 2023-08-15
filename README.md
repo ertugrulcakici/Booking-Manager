@@ -43,7 +43,7 @@ Follow these steps to set up the your own Booking Manager application running on
 
 1- Initialize firebase on your project folder by following [instructions here](https://firebase.google.com/docs/flutter/setup?hl=en&platform=ios "instructions here") Make sure that you initialized firebase auth and cloudfirestore on your firebase console.
 
-#### Android integrations
+##### Android integrations
 
 1- Go to android folder and run this command "./gradlew signingReport"
 2- Save both SHA-1 keys from debug and release sections.
@@ -52,7 +52,7 @@ Follow these steps to set up the your own Booking Manager application running on
 5- Click on "Add fingerprint" and add both SHA-1 keys.
 6- Download your google-services.json file and copy it to android > app folder
 
-#### IOS integrations
+##### IOS integrations
 1- Go to firebase console > project settings. There from IOS application section, download GoogleService-Info.plist file.
 2- Copy this GoogleService-Info.plist file into ios > Runner folder.
 3- Open ios folder via XCode.
