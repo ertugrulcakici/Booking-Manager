@@ -98,7 +98,8 @@ The packages will be used in the next versions
 If you encounter any issues or have questions, feel free to reach out to me at [ertugrul.cakicii@gmail.com](mailto:ertugrul.cakicii@gmail.com) or [https://www.linkedin.com/in/ertugrulcakici/](https://www.linkedin.com/in/ertugrulcakici/)
 
 ### Releases
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/640px-App_Store_%28iOS%29.svg.png" width="10%">
-<img src="https://static.vecteezy.com/system/resources/previews/022/613/026/original/google-play-store-icon-logo-symbol-free-png.png" width="10%">
+<a href="https://testflight.apple.com/join/pMg5NstN"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/640px-App_Store_%28iOS%29.svg.png" width="10%"></a>
+<a href="https://play.google.com/store/apps/details?id=ertugrulcakici.bookingmanager">
+<img src="https://static.vecteezy.com/system/resources/previews/022/613/026/original/google-play-store-icon-logo-symbol-free-png.png" width="10%"></a>
   
 ### [Click for detailed documentation and future versions](https://shimmer-respect-cc3.notion.site/Booking-Manager-Documentation-0f8c6fd376ad432e9df5889140dc4214?pvs=4 " Detailed App Documentation and Future Versions")
