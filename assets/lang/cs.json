@@ -1,0 +1,271 @@
+{
+    "general": {
+        "cancel": "Zrušit",
+        "save": "Uložit",
+        "ok": "OK",
+        "unknown_error": "Došlo k neznámé chybě",
+        "attention": "Pozor!",
+        "delete": "Smazat",
+        "error_try_again": "Došlo k chybě. Prosím, zkuste to znovu",
+        "add": "Přidat"
+    },
+    
+    "commons": {
+        "user_not_found": "Uživatel nenalezen",
+        "add_expense": "Přidat Výdaj",
+        "expense_category_not_found": "Kategorie výdajů nenalezena",
+        "enter_valid_number": "Zadejte platné číslo",
+        "non_empty_field_error": "Toto pole nesmí být prázdné",
+        "add_expense_category": "Přidat Kategorii Výdajů",
+        "add_service": "Přidat Službu",
+        "name_label": "Jméno"
+    },
+    
+    "exception_extensions": {
+        "invalid_mail": "Neplatná e-mailová adresa",
+        "email_already_in_use": "Tato e-mailová adresa je již používána",
+        "operation_not_allowed": "Nemáte oprávnění k provedení této operace",
+        "weak_password": "Zadané heslo je příliš slabé",
+        "missing_android_pkg_name": "Došlo k neznámé chybě (missing_android_pkg_name)",
+        "missing_continue_uri": "Došlo k neznámé chybě (missing_continue_uri)",
+        "missing_ios_bundle_id": "Došlo k neznámé chybě (missing_ios_bundle_id)",
+        "invalid_continue_uri": "Došlo k neznámé chybě (invalid_continue_uri)",
+        "unauthorized_continue_uri": "Došlo k neznámé chybě (unauthorized_continue_uri)",
+        "user_disabled": "Tento uživatel byl deaktivován",
+        "wrong_password": "Nesprávné heslo"
+    },
+    
+    "auth_service": {
+        "login_with_google_unsuccessful": "Přihlášení pomocí Google se nezdařilo",
+        "user_could_not_created": "Uživatele nelze vytvořit",
+        "no_associated_account": "S tímto e-mailovým účtem nebyl nalezen žádný související účet",
+        "logged_via_google": "Tento účet byl registrován pomocí Google. Prosím, přihlaste se pomocí Google.",
+        "there_is_error_when_login": "Při přihlašování došlo k chybě: {}",
+        "error_while_creating_user": "Při vytváření uživatele došlo k chybě: {}"
+    },
+    
+    "branch_manager": {
+        "already_registered_at_branch": "Uživatel je již zaregistrován v této pobočce",
+        "error_creating_service": "Při vytváření služby došlo k chybě",
+        "error_updating_service": "Při aktualizaci služby došlo k chybě",
+        "error_deleting_service": "Při mazání služby došlo k chybě",
+        "error_creating_expense_category": "Při vytváření kategorie výdajů došlo k chybě",
+        "error_updating_expense_category": "Při aktualizaci kategorie výdajů došlo k chybě",
+        "error_deleting_expense_category": "Při mazání kategorie výdajů došlo k chybě"
+    },
+    
+    "session_manager": {
+        "session_time_error": "Čas relace musí být v rámci pracovní doby pobočky",
+        "session_update_error": "Při aktualizaci relace došlo k chybě: {}",
+        "session_delete_error": "Při mazání relace došlo k chybě: {}"
+    },
+    
+    "branch_model": {
+        "start_time_error": "Čas začátku nemůže být větší než čas konce",
+        "finish_time_error": "Čas konce nemůže být menší než čas začátku",
+        "equal_hours_not_allowed":"Stejná hodina počátečního a konce není povolena",
+        "start_hour_must_be_0_24":"Hour Hour musí být mezi 0 a 24",
+        "end_hour_must_be_0_24":"Konečná hodina musí být mezi 0 a 24"
+    },
+    
+    "session_model": {
+        "name": "Jméno: {}",
+        "person_count": "Počet osob: {}",
+        "phone": "Telefon: {}",
+        "extra": "Extra: {}",
+        "discount": "Sleva: {}",
+        "notes": "Poznámky: {}",
+        "assigned_to": "Přiřazeno k: {}",
+        "last_modified_by": "Naposledy upraveno: {}"
+    },
+    
+    "forgot_password": {
+        "title": "Zapomenuté Heslo",
+        "email_label": "Vaše e-mailová adresa",
+        "reset_button": "Obnovit Heslo",
+        "reset_success_message": "E-mail pro obnovení hesla byl odeslán."
+    },
+    
+    "login": {
+        "email_label": "E-mailová Adresa",
+        "email_hint": "example@example.com",
+        "password_label": "Heslo",
+        "password_hint": "Zadejte své heslo",
+        "login_button": "Přihlásit se",
+        "forgot_password_button": "Zapomenuté Heslo",
+        "no_account_message": "Nemáte účet?",
+        "register_button": "Registrovat se",
+        "login_successful": "Přihlášení bylo úspěšné",
+        "or_login_with": "Nebo se přihlaste pomocí"
+    },
+    
+    "create_branch_dialog": {
+        "branch_name_label": "Název Pobočky",
+        "branch_created_successfully": "Pobočka byla úspěšně vytvořena",
+        "branch_creation_failed": "Pobočku se nepodařilo vytvořit",
+        "create": "Vytvořit",
+        "creating_a_new_branch": "Vytváření nové pobočky"
+    },
+    
+    "profile": {
+        "title": "Můj Profil",
+        "welcome": "Vítejte \n{}",
+        "email_copied": "E-mailová adresa byla zkopírována",
+        "create_branch_dialog_title": "Vytvořte Novou Pobočku",
+        "your_email": "Vaše e-mailová adresa: {}"
+    },
+    
+    "register": {
+        "title": "Registrace",
+        "email_label": "E-mailová Adresa",
+        "email_hint": "example@example.com",
+        "password_label": "Heslo",
+        "password_hint": "******",
+        "show_password_button": "Ukázat Heslo",
+        "name_hint": "Zadejte jméno",
+        "register_button": "Registrovat se"
+    },
+   
+    "verify_email": {
+        "mail_not_verified_yet": "Váš e-mail zatím nebyl ověřen. Opravdu chcete tuto stránku opustit?",
+        "mail_verification": "Ověření E-mailu",
+        "check_mail_message": "Odeslali jsme ověřovací e-mail. Prosím, zkontrolujte svou poštu.",
+        "i_verified": "Ověřil jsem",
+        "mail_verified": "E-mail byl úspěšně ověřen",
+        "mail_verified_error": "Ověření e-mailu se nezdařilo"
+    },
+    "branch_expenses_view": {
+        "title": "Rozšíření {}",
+        "expense_not_found": "Výdaje nebyly nalezeny",
+        "daily_total": "Denní součet: {}",
+        "total": "Celkově: {}",
+        "description": "Popis: {}",
+        "added_time": "Čas přidání: {}",
+        "delete_expense_title": "Smazat Výdaj",
+        "delete_expense_content": "Jste si jisti, že chcete tento výdaj smazat? Tuto akci nelze vrátit zpět."
+    },
+    
+    "branch_service_item": {
+        "delete_service_title": "Smazat Službu",
+        "delete_service_content": "Jste si jisti, že chcete tuto službu smazat? Tím se tato služba odstraní ze všech přidružených sezení.",
+        "service_deleted_successfully": "Služba byla úspěšně smazána"
+    },
+    
+    "create_branch_service_dialog": {
+        "edit_service": "Upravit Službu",
+        "service_name_label": "Název Služby",
+        "service_price_label": "Cena Služby",
+        "service_added_successfully": "Služba byla úspěšně přidána",
+        "service_updated_successfully": "Služba byla úspěšně aktualizována"
+    },
+    
+    "create_expense_category_dialog": {
+        "edit_expense_category": "Upravit Kategorii Výdajů",
+        "category_name_label": "Název Kategorie",
+        "category_description_label": "Popis Kategorie",
+        "category_description_hint": "Volitelné",
+        "expense_category_added_successfully": "Kategorie výdajů byla úspěšně přidána",
+        "expense_category_updated_successfully": "Kategorie výdajů byla úspěšně aktualizována"
+    },
+    
+    "expanse_category_item": {
+        "delete_expense_category_title": "Smazat Kategorii Výdajů",
+        "delete_expense_category_content": "Jste si jisti, že chcete tuto kategorii smazat? Tím se smažou všechny výdaje v této kategorii.",
+        "expense_category_deleted_successfully": "Kategorie výdajů byla úspěšně smazána"
+    },
+    
+    "branch_settings_view": {
+        "delete_branch": "Smazat Pobočku",
+        "expense_categories": "Kategorie Výdajů",
+        "branch_services": "Služby",
+        "person_price_updated": "Cena na osobu byla úspěšně aktualizována",
+        "person_price_label": "Cena na osobu",
+        "invalid_time": "Neplatný čas",
+        "default_duration_updated": "Výchozí doba byla aktualizována",
+        "default_duration_label": "Výchozí doba (Minuty)",
+        "default_person_count_updated": "Výchozí počet osob byl aktualizován",
+        "default_person_count_label": "Výchozí počet osob",
+        "default_start_hour_updated": "Výchozí začáteční hodina byla aktualizována",
+        "default_start_hour_label": "Výchozí začáteční hodina",
+        "default_end_hour_updated": "Výchozí konečná hodina byla aktualizována",
+        "default_end_hour_label": "Výchozí konečná hodina",
+        "delete_branch_content": "Tímto budou smazány všechny údaje týkající se pobočky. Tato akce je nevratná!\nJste si jisti, že chcete pokračovat?"
+    },
+    
+    "add_workers_dialog": {
+        "add_worker_title": "Přidat Pracovníka",
+        "worker_mail_label": "E-mailová adresa pracovníka"
+    },
+    
+    "branch_workers_view": {
+        "branch_workers": "Pracovníci u {}",
+        "worker_not_found": "Pracovník nebyl nalezen",
+        "delete_worker_title": "Smazat Pracovníka",
+        "user_deleted_successfully": "Pracovník byl úspěšně smazán",
+        "user_delete_error": "Při mazání pracovníka došlo k chybě"
+    },
+    
+    "day_statistics": {
+        "title": "Den Statistik pro {}",
+        "total_income": "Celkový příjem: {}",
+        "total_expense": "Celkový výdaj: {}",
+        "total_profit": "Celkový zisk: {}",
+        "total_discount": "Celková sleva: {}",
+        "total_extra": "Celková přirážka: {}",
+        "total_person_count": "Celkový počet osob: {}",
+        "total_session_count": "Celkový počet sezení: {}",
+        "service_not_found": "Služba nebyla nalezena",
+        "service_statistics": "Statistiky Služeb",
+        "expense_category_statistics": "Statistiky Kategorií Výdajů"
+    },
+    
+    "create_expense_dialog": {
+        "add_expense": "Přidat Výdaj",
+        "select_category": "Vyberte kategorii",
+        "expense_total": "Celková částka výdaje",
+        "note": "Poznámka (Volitelné)",
+        "expense_added": "Výdaj byl úspěšně přidán",
+        "expense_addition_error": "Při přidávání výdaje došlo k chybě: {}"
+    },
+    
+    "home_drawer": {
+        "branches": "Moje Pobočky",
+        "settings_label": "Nastavení",
+        "profile_label": "Profil",
+        "logout_label": "Odhlásit se",
+        "general_branch_settings": "Obecná Nastavení Pobočky",
+        "expenses": "Výdaje",
+        "workers": "Pracovníci",
+        "leave_branch_label": "Opustit Pobočku",
+        "leave_branch_warning": "Jste si jisti, že chcete opustit tuto pobočku?",
+        "leave_branch_successful": "Úspěšně jste opustili pobočku",
+        "leave_branch_error": "Při opouštění pobočky došlo k chybě: {}"
+    },
+    
+    "set_session_dialog": {
+        "select_start_time": "Vyberte čas začátku",
+        "time": "Čas: {}",
+        "date": "Datum: {}",
+        "time_minutes": "Čas (Minuty)",
+        "person_count_label": "Počet osob",
+        "phone_label": "Telefonní číslo",
+        "extra_label": "Příplatek",
+        "discount_label": "Sleva",
+        "assign_to": "Přiřadit k",
+        "notes_label": "Poznámky",
+        "not_assigned": "Nepřiřazeno",
+        "session_deleted": "Sezení bylo smazáno",
+        "session_created": "Sezení bylo úspěšně vytvořeno"
+    },
+    
+    "home": {
+        "branches_empty": "Zatím nemáte žádné pobočky",
+        "create_branch_instruction": "Pobočku můžete vytvořit na své stránce s profilem",
+        "session_updated": "Sezení bylo úspěšně aktualizováno"
+    },
+    
+    "settings": {
+        "title": "Nastavení",
+        "language": "Jazyk"
+    }
+}

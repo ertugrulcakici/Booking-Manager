@@ -1,0 +1,272 @@
+{
+    "general": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "ok": "OK",
+        "unknown_error": "An unknown error occurred",
+        "attention": "Attention!",
+        "delete": "Delete",
+        "error_try_again": "An error occurred. Please try again",
+        "add": "Add"
+    },
+    
+    "commons": {
+        "user_not_found": "User not found",
+        "add_expense": "Add Expense",
+        "expense_category_not_found": "Expense category not found",
+        "enter_valid_number": "Please enter a valid number",
+        "non_empty_field_error": "This field cannot be empty",
+        "add_expense_category": "Add Expense Category",
+        "add_service": "Add Service",
+        "name_label": "Name"
+    },
+    
+    "exception_extensions": {
+        "invalid_mail": "Invalid email address",
+        "email_already_in_use": "This email address is already in use",
+        "operation_not_allowed": "You are not authorized to perform this operation",
+        "weak_password": "The entered password is too weak",
+        "missing_android_pkg_name": "An unknown error occurred (missing_android_pkg_name)",
+        "missing_continue_uri": "An unknown error occurred (missing_continue_uri)",
+        "missing_ios_bundle_id": "An unknown error occurred (missing_ios_bundle_id)",
+        "invalid_continue_uri": "An unknown error occurred (invalid_continue_uri)",
+        "unauthorized_continue_uri": "An unknown error occurred (unauthorized_continue_uri)",
+        "user_disabled": "This user has been disabled",
+        "wrong_password": "Incorrect password"
+    },
+    
+    "auth_service": {
+        "login_with_google_unsuccessful": "Failed to log in with Google",
+        "user_could_not_created": "User could not be created",
+        "no_associated_account": "No associated account found with this email address",
+        "logged_via_google": "This account has been registered with Google. Please log in with Google.",
+        "there_is_error_when_login": "An error occurred while logging in: {}",
+        "error_while_creating_user": "An error occurred while creating the user: {}"
+    },
+    
+    "branch_manager": {
+        "already_registered_at_branch": "The user is already registered at this branch",
+        "error_creating_service": "An error occurred while creating the service",
+        "error_updating_service": "An error occurred while updating the service",
+        "error_deleting_service": "An error occurred while deleting the service",
+        "error_creating_expense_category": "An error occurred while creating the expense category",
+        "error_updating_expense_category": "An error occurred while updating the expense category",
+        "error_deleting_expense_category": "An error occurred while deleting the expense category"
+    },
+    
+    "session_manager": {
+        "session_time_error": "The session time must be within branch working hours",
+        "session_update_error": "An error occurred while updating the session: {}",
+        "session_delete_error": "An error occurred while deleting the session: {}"
+    },
+    
+    "branch_model": {
+        "start_time_error": "Start time cannot be greater than end time",
+        "finish_time_error": "Finish time cannot be less than start time",
+        "equal_hours_not_allowed":"Equal start and end hour is not allowed",
+        "start_hour_must_be_0_24":"Start hour must be between 0 and 24",
+        "end_hour_must_be_0_24":"End hour must be between 0 and 24"
+    },
+    
+    "session_model": {
+        "name": "Name: {}",
+        "person_count": "Person count: {}",
+        "phone": "Phone: {}",
+        "extra": "Extra: {}",
+        "discount": "Discount: {}",
+        "notes": "Notes: {}",
+        "assigned_to": "Assigned to: {}",
+        "last_modified_by": "Last modified by: {}"
+    },
+    
+    "forgot_password": {
+        "title": "Forgot Password",
+        "email_label": "Your email address",
+        "reset_button": "Reset Password",
+        "reset_success_message": "Password reset email has been sent."
+    },
+    
+    "login": {
+        "email_label": "Email Address",
+        "email_hint": "example@example.com",
+        "password_label": "Password",
+        "password_hint": "Enter your password",
+        "login_button": "Login",
+        "forgot_password_button": "Forgot Password",
+        "no_account_message": "Don't have an account?",
+        "register_button": "Register",
+        "login_successful": "Login successful",
+        "or_login_with": "Or log in with"
+    },
+    
+    "create_branch_dialog": {
+        "branch_name_label": "Branch Name",
+        "branch_created_successfully": "Branch created successfully",
+        "branch_creation_failed": "Failed to create branch",
+        "create": "Create",
+        "creating_a_new_branch": "Creating a new branch"
+    },
+    
+    "profile": {
+        "title": "My Profile",
+        "welcome": "Welcome \n{}",
+        "email_copied": "Email address copied",
+        "create_branch_dialog_title": "Create a new branch",
+        "your_email": "Your email address: {}"
+    },
+    
+    "register": {
+        "title": "Register",
+        "email_label": "Email Address",
+        "email_hint": "example@example.com",
+        "password_label": "Password",
+        "password_hint": "******",
+        "show_password_button": "Show Password",
+        "name_hint": "Enter name",
+        "register_button": "Register"
+    },
+   
+    "verify_email": {
+        "mail_not_verified_yet": "Your email has not been verified yet. Are you sure you want to leave this page?",
+        "mail_verification": "Email Verification",
+        "check_mail_message": "We've sent a verification email\nPlease check your email",
+        "i_verified": "I Verified",
+        "mail_verified": "Email verification successful",
+        "mail_verified_error": "Email verification failed"
+    },
+    
+    "branch_expenses_view": {
+        "title": "Expenses of {}",
+        "expense_not_found": "Expense not found",
+        "daily_total": "Daily total: {}",
+        "total": "Total: {}",
+        "description": "Description: {}",
+        "added_time": "Added time: {}",
+        "delete_expense_title": "Delete Expense",
+        "delete_expense_content": "Are you sure you want to delete this expense? This action cannot be undone."
+    },
+    
+    "branch_service_item": {
+        "delete_service_title": "Delete Service",
+        "delete_service_content": "Are you sure you want to delete this service? This will remove this service from all assigned sessions.",
+        "service_deleted_successfully": "Service deleted successfully"
+    },
+    
+    "create_branch_service_dialog": {
+        "edit_service": "Edit Service",
+        "service_name_label": "Service Name",
+        "service_price_label": "Service Price",
+        "service_added_successfully": "Service added successfully",
+        "service_updated_successfully": "Service updated successfully"
+    },
+    
+    "create_expense_category_dialog": {
+        "edit_expense_category": "Edit Expense Category",
+        "category_name_label": "Category Name",
+        "category_description_label": "Category Description",
+        "category_description_hint": "Optional",
+        "expense_category_added_successfully": "Expense category added successfully",
+        "expense_category_updated_successfully": "Expense category updated successfully"
+    },
+    
+    "expense_category_item": {
+        "delete_expense_category_title": "Delete Expense Category",
+        "delete_expense_category_content": "Are you sure you want to delete this category? This will delete all expenses under this category.",
+        "expense_category_deleted_successfully": "Expense category deleted successfully"
+    },
+    
+    "branch_settings_view": {
+        "delete_branch": "Delete Branch",
+        "expense_categories": "Expense Categories",
+        "branch_services": "Services",
+        "person_price_updated": "Price per person updated successfully",
+        "person_price_label": "Price per person",
+        "invalid_time": "Invalid time",
+        "default_duration_updated": "Default duration updated",
+        "default_duration_label": "Default duration (Minutes)",
+        "default_person_count_updated": "Default person count updated",
+        "default_person_count_label": "Default person count",
+        "default_start_hour_updated": "Default start hour updated",
+        "default_start_hour_label": "Default start hour",
+        "default_end_hour_updated": "Default end hour updated",
+        "default_end_hour_label": "Default end hour",
+        "delete_branch_content": "This will delete the branch and all associated data. This action is irreversible!\nAre you sure you want to proceed?"
+    },
+    
+    "add_workers_dialog": {
+        "add_worker_title": "Add Worker",
+        "worker_mail_label": "Worker's email address"
+    },
+    
+    "branch_workers_view": {
+        "branch_workers": "Workers at {}",
+        "worker_not_found": "Worker not found",
+        "delete_worker_title": "Delete Worker",
+        "user_deleted_successfully": "Worker deleted successfully",
+        "user_delete_error": "An error occurred while deleting the worker"
+    },
+    
+    "day_statistics": {
+        "title": "Day Statistics for {}",
+        "total_income": "Total income: {}",
+        "total_expense": "Total expense: {}",
+        "total_profit": "Total profit: {}",
+        "total_discount": "Total discount: {}",
+        "total_extra": "Total extra: {}",
+        "total_person_count": "Total person count: {}",
+        "total_session_count": "Total session count: {}",
+        "service_not_found": "Service not found",
+        "service_statistics": "Service Statistics",
+        "expense_category_statistics": "Expense Category Statistics"
+    },
+    
+    "create_expense_dialog": {
+        "add_expense": "Add Expense",
+        "select_category": "Select a category",
+        "expense_total": "Expense total",
+        "note": "Note (Optional)",
+        "expense_added": "Expense added successfully",
+        "expense_addition_error": "An error occurred while adding the expense: {}"
+    },
+    
+    "home_drawer": {
+        "branches": "My Branches",
+        "settings_label": "Settings",
+        "profile_label": "Profile",
+        "logout_label": "Logout",
+        "general_branch_settings": "General Branch Settings",
+        "expenses": "Expenses",
+        "workers": "Workers",
+        "leave_branch_label": "Leave Branch",
+        "leave_branch_warning": "Are you sure you want to leave this branch?",
+        "leave_branch_successful": "You have successfully left the branch",
+        "leave_branch_error": "An error occurred while leaving the branch: {}"
+    },
+    
+    "set_session_dialog": {
+        "select_start_time": "Select start time",
+        "time": "Time: {}",
+        "date": "Date: {}",
+        "time_minutes": "Time (Minutes)",
+        "person_count_label": "Person count",
+        "phone_label": "Phone number",
+        "extra_label": "Extra",
+        "discount_label": "Discount",
+        "assign_to": "Assign to",
+        "notes_label": "Notes",
+        "not_assigned": "Not assigned",
+        "session_deleted": "Session deleted",
+        "session_created": "Session created successfully"
+    },
+    
+    "home": {
+        "branches_empty": "You don't have any branches yet",
+        "create_branch_instruction": "You can create a branch from your profile page",
+        "session_updated": "Session updated successfully"
+    },
+    
+    "settings": {
+        "title": "Settings",
+        "language": "Language"
+    }
+}

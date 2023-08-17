@@ -1,0 +1,275 @@
+{
+
+    "general":{
+        "cancel":"İptal",
+        "save":"Kaydet",
+        "ok":"Tamam",
+        "unknown_error":"Bilinmeyen bir hata oluştu",
+        "attention":"Dikkat!",
+        "delete":"Sil",
+        "error_try_again":"Bir hata oluştu. Lütfen tekrar deneyiniz",
+        "add":"Ekle"
+    },
+    
+    "commons":{
+        "user_not_found":"Kullanıcı bulunamadı",
+        "add_expense":"Gider ekle",
+        "expense_category_not_found":"Gider kategorisi bulunamadı",
+        "enter_valid_number":"Geçerli bir sayı giriniz",
+        "non_empty_field_error":"Bu alan boş bırakılamaz",
+        "add_expense_category":"Gider kategorisi ekle",
+        "add_service":"Servis ekle",
+        "name_label":"İsim"
+        
+    },
+
+    "exception_extensions":{
+        "invalid_mail":"Geçersiz mail adresi",
+        "email_already_in_use":"Bu mail adresi zaten kullanılıyor",
+        "operation_not_allowed":"Bu işlem için yetkiniz yok",
+        "weak_password":"Girilen şifre çok zayıf",
+        "missing_android_pkg_name":"Bilinmeyen bir hata oluştu (missing_android_pkg_name)",
+        "missing_continue_uri":"Bilinmeyen bir hata oluştu (missing_continue_uri)",
+        "missing_ios_bundle_id":"Bilinmeyen bir hata oluştu (missing_ios_bundle_id)",
+        "invalid_continue_uri":"Bilinmeyen bir hata oluştu (invalid_continue_uri)",
+        "unauthorized_continue_uri":"Bilinmeyen bir hata oluştu (unauthorized_continue_uri)",
+        "user_disabled":"Bu kullanıcı devre dışı bırakılmış",
+        "wrong_password":"Şifre yanlış"
+    },
+
+    "auth_service":{
+        "login_with_google_unsuccessful":"Google ile giriş yapma başarısız",
+        "user_could_not_created":"Kullanıcı oluşturulamadı",
+        "no_associated_account":"Bu mail adresi ile ilişkili bir hesap bulunamadı",
+        "logged_via_google":"Bu hesaba google ile kayıt olunmuş. Lütfen google ile giriş yapınız.",
+        "there_is_error_when_login":"Giriş yaparken hata oluştu: {}",
+        "error_while_creating_user":"Kullanıcı oluşturulurken hata oluştu: {}"
+    },
+
+    "branch_manager":{
+        "already_registered_at_branch":"Kullanıcı zaten bu şubede kayıtlı",
+        "error_creating_service":"Servis eklenirken bir hata oluştu",
+        "error_updating_service":"Servis güncellenirken bir hata oluştu",
+        "error_deleting_service":"Servis silinirken bir hata oluştu",
+        "error_creating_expense_category":"Gider kategorisi eklenirken bir hata oluştu",
+        "error_updating_expense_category":"Gider kategorisi güncellenirken bir hata oluştu",
+        "error_deleting_expense_category":"Gider kategorisi silinirken bir hata oluştu"
+    },
+
+    "session_manager": {
+        "session_time_error":"Seans saati, şube çalışma saatleri arasında olmalıdır",
+        "session_update_error":"Seans güncellenirken bir hata oluştu: {}",
+        "session_delete_error":"Seans silinirken bir hata oluştu: {}"
+    },
+
+    "branch_model":{
+        "start_time_error":"Başlangıç saati bitiş saatinden büyük olamaz",
+        "finish_time_error":"Bitiş saati başlangıç saatinden küçük olamaz",
+        "equal_hours_not_allowed":"Equal start and end hour is not allowed",
+        "start_hour_must_be_0_24":"Start hour must be between 0 and 24",
+        "end_hour_must_be_0_24":"End hour must be between 0 and 24"
+    },
+
+    "session_model" : {
+        "name":"İsim: {}",
+        "person_count":"Kişi sayısı :{}",
+        "phone":"Telefon: {}",
+        "extra":"Ekstra: {}",
+        "discount":"İndirim: {}",
+        "notes":"Notlar: {}",
+        "assigned_to":"Atanan: {}",
+        "last_modified_by":"Son düzenleyen: {}"
+    },
+
+
+    "forgot_password":{
+        "title": "Şifremi Unuttum",
+        "email_label": "E-posta adresiniz",
+        "reset_button": "Şifremi Sıfırla",
+        "reset_success_message": "Şifre sıfırlama maili gönderildi."
+    },
+    "login":{
+        "email_label": "E-Posta Adresi",
+        "email_hint": "ornek@ornek.com",
+        "password_label": "Şifre",
+        "password_hint": "Şifrenizi girin",
+        "login_button": "Giriş Yap",
+        "forgot_password_button": "Şifremi Unuttum",
+        "no_account_message": "Hesabınız yok mu?",
+        "register_button": "Kayıt Ol",
+        "login_successful": "Giriş başarılı",
+        "or_login_with": "Veya şununla giriş yapın"
+    },
+
+    "create_branch_dialog":{
+        "branch_name_label":"İş yeri adı",
+        "branch_created_successfully":"İş yeri oluşturuldu",
+        "branch_creation_failed":"İş yeri oluşturulamadı",
+        "create":"Oluştur",
+        "creating_a_new_branch":"Yeni bir iş yeri oluşturuyorsunuz"
+    },
+
+    "profile":{
+        "title":"Profilim",
+        "welcome":"Hoş geldin \n{}",
+        "email_copied":"E-posta adresi kopyalandı",
+        "create_branch_dialog_title":"Yeni bir iş yeri oluşturun",
+        "your_email":"E-posta adresiniz: {}"
+    },
+
+    "register":{
+        "title": "Kayıt Ol",
+        "email_label": "E-Posta Adresi",
+        "email_hint": "ornek@ornek.com",
+        "password_label": "Şifre",
+        "password_hint": "******",
+        "show_password_button": "Şifreyi Göster",
+        "name_hint": "İsim giriniz",
+        "register_button": "Kayıt Ol"
+    },
+   
+    "verify_email":{
+        "mail_not_verified_yet":"Henüz mailiniz onaylanmadı. Bu sayfadan çıkmak istediğinize emin misiniz ?",
+        "mail_verification":"Mail Doğrulama",
+        "check_mail_message":"Doğrulama maili gönderdik\nLütfen mailinizi kontrol edin",
+        "i_verified":"Doğruladım",
+        "mail_verified":"Mail doğrulama başarılı",
+        "mail_verified_error":"Mail doğrulama başarısız"
+    },
+
+    "branch_expenses_view":{
+        "title":"{} giderleri",
+        "expense_not_found":"Gider bulunamadı",
+        "daily_total":"Gün toplamı: {}",
+        "total":"Tutar: {}",
+        "description":"Açıklama: {}",
+        "added_time":"Eklenme zamanı: {}",
+        "delete_expense_title":"Gideri sil",
+        "delete_expense_content":"Bu gideri silmek istediğinize emin misiniz? Bu işlem geri alınamaz"
+    },
+
+    "branch_service_item":{
+        "delete_service_title":"Bu servisi silmek istediğinize emin misiniz ?",
+        "delete_service_content":"Bu servisin kayıtlı olduğu tüm seanslardan bu servis kaldırılacak",
+        "service_deleted_successfully":"Servis başarıyla silindi"
+    },
+
+    "create_branch_service_dialog":{
+        "edit_service":"Hizmeti düzenle",
+        "service_name_label":"Hizmet adı",
+        "service_price_label":"Hizmet fiyatı",
+        "service_added_successfully":"Hizmet başarıyla eklendi",
+        "service_updated_successfully":"Hizmet başarıyla güncellendi"
+    },
+
+    "create_expense_category_dialog":{
+        "edit_expense_category":"Gider kategorisini düzenle",
+        "category_name_label":"Kategori adı",
+        "category_description_label":"Kategori açıklaması",
+        "category_description_hint":"İsteğe bağlı",
+        "expense_category_added_successfully":"Gider kategorisi başarıyla eklendi",
+        "expense_category_updated_successfully":"Gider kategorisi başarıyla güncellendi"
+    },
+
+    "expanse_category_item":{
+        "delete_expense_category_title":"Bu kategoriyi silmek istediğinize emin misiniz?",
+        "delete_expense_category_content":"Bu kategorinin kayıtlı olduğu tüm giderler silinecek",
+        "expense_category_deleted_successfully":"Gider kategorisi başarıyla silindi"
+    },
+
+    "branch_settings_view":{
+        "delete_branch":"İş yerini sil",
+        "expense_categories":"Gider kategorileri",
+        "branch_services":"Hizmetler",
+        "person_price_updated":"Kişi başı fiyat başarıyla güncellendi",
+        "person_price_label":"Kişi başı fiyat",
+        "invalid_time":"Geçersiz zaman",
+        "default_duration_updated":"Varsayılan zaman güncellendi",
+        "default_duration_label":"Varsayılan süre (Dakika)",
+        "default_person_count_updated":"Varsayılan kişi sayısı güncellendi",
+        "default_person_count_label":"Varsayılan kişi sayısı",
+        "default_start_hour_updated":"Varsayılan başlangıç saati güncellendi",
+        "default_start_hour_label":"Varsayılan başlangıç saati",
+        "default_end_hour_updated":"Varsayılan bitiş saati güncellendi",
+        "default_end_hour_label":"Varsayılan bitiş saati",
+        "delete_branch_content":"Bu iş yeri ve alakalı tüm verileri silinecektir. Bu geri alınamaz bir işlem!\nOnaylıyor musunuz ?"
+    },
+
+    "add_workers_dialog":{
+        "add_worker_title":"Çalışan Ekle",
+        "worker_mail_label":"Çalışan mail adresi"
+    },
+
+    "branch_workers_view":{
+        "branch_workers":"{}'nin çalışanları",
+        "worker_not_found":"Çalışan bulunamadı",
+        "delete_worker_title":"Çalışanı sil",
+        "user_deleted_successfully":"Çalışan başarıyla silindi",
+        "user_delete_error":"Çalışan silinirken bir hata oluştu"
+    },
+
+    "day_statistics": {
+        "title":"{}'nin gün istatistikleri",
+        "total_income":"Toplam gelir:{}",
+        "total_expense":"Toplam gider:{}",
+        "total_profit":"Toplam kar:{}",
+        "total_discount":"Toplam indirim:{}",
+        "total_extra":"Toplam ekstra:{}",
+        "total_person_count":"Toplam kişi sayısı:{}",
+        "total_session_count":"Toplam seans sayısı:{}",
+        "service_not_found":"Hizmet bulunamadı",
+        "service_statistics":"Hizmetlerin istatistikleri",
+        "expense_category_statistics":"Gider kategorilerinin istatistikleri"
+    },
+
+    "create_expense_dialog": {
+        "add_expense":"Gider Ekle",
+        "select_category":"Kategori seçiniz",
+        "expense_total":"Gider tutarı",
+        "note":"Not (İsteğe bağlı)",
+        "expense_added":"Gider başarıyla eklendi",
+        "expense_addition_error":"Gider eklenirken bir hata oluştu: {}"
+    },
+
+    "home_drawer":{
+        "branches":"İş yerlerim",
+        "settings_label":"Ayarlar",
+        "profile_label":"Profil",
+        "logout_label":"Çıkış Yap",
+        "general_branch_settings":"Genel işletme ayarları",
+        "expenses":"Giderler",
+        "workers":"Çalışanlar",
+        "leave_branch_label":"İş yerinden ayrıl",
+        "leave_branch_warning":"Bu iş yerinden ayrılmak istediğinize emin misiniz?",
+        "leave_branch_successful":"İş yerinden başarıyla ayrıldınız",
+        "leave_branch_error":"İş yerinden ayrılırken bir hata oluştu: {}"
+    },
+
+    "set_session_dialog": {
+        "select_start_time":"Başlangıç saati seçiniz",
+        "time":"Saat: {}",
+        "date":"Tarih: {}",
+        "time_minutes":"Saat(Dakika)",
+        "person_count_label":"Kişi sayısı",
+        "phone_label":"Telefon numarası",
+        "extra_label":"Ekstra",
+        "discount_label":"İndirim",
+        "assign_to":"Kişiye ata",
+        "notes_label":"Notlar",
+        "not_assigned":"Atama yapılmadı",
+        "session_deleted":"Randevu silindi",
+        "session_created":"Randevu başarıyla oluşturuldu"
+    },
+
+    "home":{
+        "branches_empty":"Henüz bir iş yeriniz yok",
+        "create_branch_instruction":"Profil sayfasından iş yerinizi oluşturabilirsiniz",
+        "session_updated":"Randevu başarıyla güncellendi"
+        
+    },
+
+    "settings":{
+        "title":"Ayarlar",
+        "language":"Dil"
+    }
+}
