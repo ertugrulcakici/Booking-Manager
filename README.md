@@ -88,11 +88,17 @@ This content will be added soon
 
 The packages will be used in the next versions
 
-- [**Firebase Remote Config**](https://pub.dev/packages/firebase_remote_config "**Firebase Remote Config**")
-- [**Firebase Analytics**](https://pub.dev/packages/firebase_analytics "**Firebase Analytics**")
+- [**firebase_remote_config**](https://pub.dev/packages/firebase_remote_config "**Firebase Remote Config**") for setting configs remotely and forcing app users to necesarry updates.
+- [**firebase_analytics**](https://pub.dev/packages/firebase_analytics "**Firebase Analytics**") for how to improve efficiency of app.
+- [**cloud_functions**](https://pub.dev/packages/cloud_functions "**cloud_functions**") for seperating some logic to backend and triggering some scheduled events
+- [**firebase_messaging**](https://pub.dev/packages/firebase_messaging "**firebase_messaging**") for sending notifications and in app banners.
 
 ### Support & Contact
 
-If you encounter any issues or have questions, feel free to reach out to me at [ertugrul.cakicii@gmail.com](mailto:ertugrul.cakicii@gmail.com).
+If you encounter any issues or have questions, feel free to reach out to me at [ertugrul.cakicii@gmail.com](mailto:ertugrul.cakicii@gmail.com) or [https://www.linkedin.com/in/ertugrulcakici/](https://www.linkedin.com/in/ertugrulcakici/)
 
-## [ Click for detailed documentation and future versions](https://shimmer-respect-cc3.notion.site/Booking-Manager-Documentation-0f8c6fd376ad432e9df5889140dc4214?pvs=4 " Detailed App Documentation and Future Versions")
+### Releases
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/640px-App_Store_%28iOS%29.svg.png" width="10%">
+<img src="https://static.vecteezy.com/system/resources/previews/022/613/026/original/google-play-store-icon-logo-symbol-free-png.png" width="10%">
+  
+### [Click for detailed documentation and future versions](https://shimmer-respect-cc3.notion.site/Booking-Manager-Documentation-0f8c6fd376ad432e9df5889140dc4214?pvs=4 " Detailed App Documentation and Future Versions")
