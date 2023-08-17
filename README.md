@@ -21,8 +21,8 @@ Booking Manager offers user-friendly, customizable, real-time session tracking a
   </li>
   <li>
 <img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/branch_workers.png" width="30%">
-<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/daily_statistics.png" width="30%">
-<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/daily_statistics_2.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/day_statistics.png" width="30%">
+<img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/day_statistics_2.png" width="30%">
     </li>
     <li>
 <img src="https://raw.githubusercontent.com/ertugrulcakici/booking_manager/main/media/github/drawer.png" width="30%">
