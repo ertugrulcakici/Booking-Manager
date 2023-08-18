@@ -47,6 +47,9 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
             separatorBuilder: (context, index) => const SizedBox(height: 30),
             itemCount: elements.length,
           ),
+          const Spacer(),
+          _deleteAccountButton(),
+          SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
         ],
       ),
     );
@@ -121,6 +124,35 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
             context: context,
             builder: (context) => const _CreateBranchDialog());
       },
+    );
+  }
+
+  // TODO: localization
+
+  Widget _deleteAccountButton() {
+    return ElevatedButton(
+      onPressed: () async {
+        PopupHelper.showOkCancelDialog(
+            title: "Dikkat",
+            content:
+                "Hesabınız silinecek. Bu işlem geri alınamaz. Daha sonra aynı bilgiler ile yeni bir hesap oluşturabilirsiniz",
+            onOk: () {
+              try {
+                PopupHelper.showLoadingWhile(
+                    () async => await AuthService.instance.deleteAccount());
+              } catch (e) {
+                PopupHelper.showAnimatedInfoDialog(
+                    title: "Kullanıcı silme başarısız oldu",
+                    isSuccessful: false);
+              }
+            });
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.red,
+        fixedSize: Size(MediaQuery.sizeOf(context).width * 0.8, 50),
+        foregroundColor: Colors.white,
+      ),
+      child: const Text("Hesap sil"),
     );
   }
 }

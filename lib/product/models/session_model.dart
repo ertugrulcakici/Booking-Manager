@@ -14,7 +14,7 @@ class SessionModel {
   final String lastModifiedByUid;
   Future<UserModel?> get lastModifiedBy async =>
       await ProviderManager.branchManager
-          .getUser(branchUid: branchUid, userUid: lastModifiedByUid);
+          .getBranchUser(branchUid: branchUid, userUid: lastModifiedByUid);
 
   final String? assignedTo;
   final String branchUid;

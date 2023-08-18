@@ -114,8 +114,7 @@ class _BranchSettingsViewState extends ConsumerState<BranchSettingsView> {
       child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.red,
-            padding: const EdgeInsets.all(10),
-            minimumSize: const Size(0.8, 0.05),
+            fixedSize: Size(MediaQuery.sizeOf(context).width * 0.8, 50),
             foregroundColor: Colors.white,
           ),
           onPressed: _deleteBranch,

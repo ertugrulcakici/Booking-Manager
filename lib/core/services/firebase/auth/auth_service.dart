@@ -123,9 +123,8 @@ final class AuthService implements IAuthService {
     } on FirebaseAuthException catch (e) {
       throw e.localized;
     } catch (e) {
-      // throw ErrorDescription("Giriş yaparken hata oluştu: $e");
-      throw ErrorDescription(
-          LocaleKeys.auth_service_there_is_error_when_login.tr());
+      throw ErrorDescription(LocaleKeys.auth_service_there_is_error_when_login
+          .tr(args: [e.toString()]));
     }
     if (userCredential!.user == null) {
       throw ErrorDescription(LocaleKeys.commons_user_not_found.tr());
@@ -151,9 +150,10 @@ final class AuthService implements IAuthService {
     } on FirebaseAuthException catch (e) {
       throw e.localized;
     } catch (e) {
-      // throw Exception("Kullanıcı oluşturulurken bilinmeyen bir hata oluştu ($e)");
       throw ErrorDescription(
-          LocaleKeys.auth_service_error_while_creating_user.tr());
+          LocaleKeys.auth_service_error_while_creating_user.tr(
+        args: [e.toString()],
+      ));
     }
     if (userCredential!.user == null) {
       throw ErrorDescription(
@@ -176,17 +176,6 @@ final class AuthService implements IAuthService {
       userCredential!.user?.delete();
       throw Exception(LocaleKeys.auth_service_user_could_not_created.tr());
     }
-  }
-
-  @override
-  Future<void> signOut() async {
-    await FirebaseAuth.instance.signOut();
-    await GoogleSignIn().signOut();
-    await NavigationService.toPageAndRemoveUntil(const LoginView());
-    await _deleteUserDocStream();
-    ProviderManager.disposeAll();
-    userModel = null;
-    userCredential = null;
   }
 
   @override
@@ -218,7 +207,7 @@ final class AuthService implements IAuthService {
               .toggleListener();
         }
       } else {
-        userModel = null;
+        signOut();
       }
     });
   }
@@ -232,5 +221,23 @@ final class AuthService implements IAuthService {
   @override
   Future<void> reloadCurrentUser() async {
     await FirebaseAuth.instance.currentUser?.reload();
+  }
+
+  @override
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+    await GoogleSignIn().signOut();
+    await NavigationService.toPageAndRemoveUntil(const LoginView());
+    await _deleteUserDocStream();
+    ProviderManager.disposeAll();
+    userModel = null;
+    userCredential = null;
+  }
+
+  @override
+  Future<void> deleteAccount() async {
+    final uid = userModel!.uid;
+    await FirebaseAuth.instance.currentUser!.delete();
+    await FirebaseFirestore.instance.collection("users").doc(uid).delete();
   }
 }

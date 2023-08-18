@@ -57,50 +57,37 @@ class _BranchWorkersState extends ConsumerState<BranchWorkersView> {
     );
   }
 
-  FutureBuilder<UserModel> _userItemTile(int index) {
-    return FutureBuilder<UserModel>(
-      future: ref.watch(ProviderManager.branchManagerProvider).getUser(
-          branchUid: widget.branchUid, userUid: _branch.workersUids[index]),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          final UserModel worker = snapshot.data!;
-          return ListTile(
-            leading: const CircleAvatar(child: Icon(Icons.person)),
-            title: Text(worker.displayName),
-            trailing: InkWell(
-                onTap: () async {
-                  PopupHelper.showOkCancelDialog(
-                      title: LocaleKeys.branch_workers_view_delete_worker_title
-                          .tr(),
-                      content: "",
-                      onOk: () async {
-                        try {
-                          await PopupHelper.showLoadingWhile(() async =>
-                              await ref
-                                  .read(ProviderManager.branchManagerProvider)
-                                  .deleteWorkerFromBranch(
-                                      branchUid: widget.branchUid,
-                                      userUid: worker.uid));
-                          PopupHelper.showAnimatedInfoDialog(
-                              title: LocaleKeys
-                                  .branch_workers_view_user_deleted_successfully
-                                  .tr(),
-                              isSuccessful: true);
-                        } catch (e) {
-                          PopupHelper.showAnimatedInfoDialog(
-                              title: LocaleKeys
-                                  .branch_workers_view_user_delete_error
-                                  .tr(),
-                              isSuccessful: false);
-                        }
-                      });
-                },
-                child: const Icon(Icons.delete)),
-          );
-        } else {
-          return const Center(child: CircularProgressIndicator());
-        }
-      },
+  Widget _userItemTile(int index) {
+    UserModel worker = _branch.users[index];
+    return ListTile(
+      leading: const CircleAvatar(child: Icon(Icons.person)),
+      title: Text(worker.displayName),
+      subtitle: Text(worker.email),
+      trailing: InkWell(
+          onTap: () async {
+            PopupHelper.showOkCancelDialog(
+                title: LocaleKeys.branch_workers_view_delete_worker_title.tr(),
+                content: "",
+                onOk: () async {
+                  try {
+                    await PopupHelper.showLoadingWhile(() async => await ref
+                        .read(ProviderManager.branchManagerProvider)
+                        .deleteWorkerFromBranch(
+                            branchUid: widget.branchUid, userUid: worker.uid));
+                    PopupHelper.showAnimatedInfoDialog(
+                        title: LocaleKeys
+                            .branch_workers_view_user_deleted_successfully
+                            .tr(),
+                        isSuccessful: true);
+                  } catch (e) {
+                    PopupHelper.showAnimatedInfoDialog(
+                        title: LocaleKeys.branch_workers_view_user_delete_error
+                            .tr(),
+                        isSuccessful: false);
+                  }
+                });
+          },
+          child: const Icon(Icons.delete)),
     );
   }
 }

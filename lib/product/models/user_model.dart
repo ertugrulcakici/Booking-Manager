@@ -5,6 +5,7 @@ class UserModel {
   final List<String> ownersOf;
   final List<String> workersOf;
   String photoUrl = "";
+  bool isDeleted = false;
 
   UserModel({
     required this.uid,
@@ -13,7 +14,18 @@ class UserModel {
     required this.ownersOf,
     required this.workersOf,
     required this.photoUrl,
+    this.isDeleted = false,
   });
+
+  // TODO: localization
+  UserModel.deletedUser()
+      : uid = "",
+        displayName = "Silinmiş Kullanıcı",
+        email = "",
+        ownersOf = [],
+        workersOf = [],
+        photoUrl = "",
+        isDeleted = true;
 
   toJson() {
     return {
@@ -33,10 +45,6 @@ class UserModel {
       email: json["email"],
       ownersOf: List<String>.from(json["ownersOf"]),
       workersOf: List<String>.from(json["workersOf"]),
-      // ownersOf:
-      //     json["ownersOf"] != null ? List<String>.from(json["ownersOf"]) : [],
-      // workersOf:
-      //     json["workersOf"] != null ? List<String>.f
       photoUrl: json["photoUrl"],
     );
   }

@@ -35,4 +35,5 @@ interface class IAuthService {
 
   Future<void> _deleteUserDocStream() async => throw UnimplementedError();
   Future<void> reloadCurrentUser() => throw UnimplementedError();
+  Future<void> deleteAccount() => throw UnimplementedError();
 }

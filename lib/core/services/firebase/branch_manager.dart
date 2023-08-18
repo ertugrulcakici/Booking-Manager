@@ -29,7 +29,7 @@ class BranchManager extends ChangeNotifier {
   BranchModel? getBranch(String uid) =>
       branches.firstWhere((element) => element.uid == uid);
 
-  Future<UserModel> getUser({
+  Future<UserModel> getBranchUser({
     required String branchUid,
     required String userUid,
   }) async {
@@ -37,13 +37,18 @@ class BranchManager extends ChangeNotifier {
     if (branch.ownerUid == userUid) {
       return AuthService.instance.userModel!;
     }
+
     if (branch.workersUids.contains(userUid)) {
       return branch.users.firstWhere((element) => element.uid == userUid);
     }
 
     final userDoc =
         await FirebaseFirestore.instance.collection("users").doc(userUid).get();
-    return UserModel.fromMap(userDoc.data()!);
+    if (userDoc.exists) {
+      return UserModel.fromMap(userDoc.data()!);
+    }
+
+    return UserModel.deletedUser();
   }
 
   Future<void> toggleListener() async {
