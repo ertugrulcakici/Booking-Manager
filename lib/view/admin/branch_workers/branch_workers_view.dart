@@ -1,4 +1,5 @@
 import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
+import 'package:bookingmanager/product/widgets/profile_picture.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -60,7 +61,7 @@ class _BranchWorkersState extends ConsumerState<BranchWorkersView> {
   Widget _userItemTile(int index) {
     UserModel worker = _branch.users[index];
     return ListTile(
-      leading: const CircleAvatar(child: Icon(Icons.person)),
+      leading: ProfilePictureWidget(photoUrl: worker.photoUrl, size: 36),
       title: Text(worker.displayName),
       subtitle: Text(worker.email),
       trailing: InkWell(

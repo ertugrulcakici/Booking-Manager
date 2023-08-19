@@ -1,12 +1,15 @@
 import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
+import 'package:bookingmanager/product/widgets/profile_picture.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../core/services/firebase/auth/auth_service.dart';
 import '../../../core/utils/popup_helper.dart';
 import '../../../product/providers/provider_manager.dart';
+import 'profile_notifier.dart';
 
 part 'create_branch_dialog.dart';
 
@@ -17,6 +20,9 @@ class ProfileView extends ConsumerStatefulWidget {
 }
 
 class _ProfileViewState extends ConsumerState<ProfileView> {
+  final AutoDisposeChangeNotifierProvider<ProfileNotifier> provider =
+      ChangeNotifierProvider.autoDispose((ref) => ProfileNotifier());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,24 +68,24 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
         child: Stack(
           children: [
             Positioned.fill(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: AuthService.instance.userModel!.photoUrl.isEmpty
-                    ? const Icon(Icons.person, size: 100, color: Colors.grey)
-                    : Image.network(
-                        AuthService.instance.userModel!.photoUrl,
-                        errorBuilder: (context, error, stackTrace) =>
-                            const Icon(Icons.person,
-                                size: 100, color: Colors.grey),
-                      ),
-              ),
-            ),
+                child: ref.watch(provider).profilePhotoChanging
+                    ? const Center(child: CircularProgressIndicator())
+                    : ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: AuthService.instance.userModel!.photoUrl.isEmpty
+                            ? const Icon(Icons.person,
+                                size: 100, color: Colors.grey)
+                            : ProfilePictureWidget(
+                                size: 100,
+                                photoUrl:
+                                    AuthService.instance.userModel!.photoUrl),
+                      )),
             Positioned(
               bottom: 0,
               right: 0,
               child: CircleAvatar(
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: _showImagePicker,
                   icon: const Icon(Icons.camera_alt),
                 ),
               ),
@@ -108,7 +114,6 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
           children: [
             Text(LocaleKeys.profile_your_email
                 .tr(args: [AuthService.instance.userModel!.email])),
-            // Text("E-postanız: ${AuthService.instance.userModel!.email}"),
             const SizedBox(width: 10),
             const Icon(Icons.copy),
           ],
@@ -154,5 +159,34 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
       ),
       child: const Text("Hesap sil"),
     );
+  }
+
+  void _showImagePicker() {
+    // TODO: localization
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Padding(
+            padding: MediaQuery.paddingOf(context),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              ListTile(
+                title: const Text("Kamera"),
+                trailing: const Icon(Icons.camera),
+                onTap: () {
+                  Navigator.pop(context);
+                  ref.read(provider).changePhoto(ImageSource.camera);
+                },
+              ),
+              ListTile(
+                title: const Text("Galeri"),
+                trailing: const Icon(Icons.photo),
+                onTap: () {
+                  Navigator.pop(context);
+                  ref.read(provider).changePhoto(ImageSource.gallery);
+                },
+              ),
+            ]),
+          );
+        });
   }
 }

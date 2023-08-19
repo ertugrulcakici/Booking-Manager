@@ -287,32 +287,43 @@ class _SetSessionDialogState extends ConsumerState<_SetSessionDialog>
                 },
               ),
               Center(
-                child: DropdownButton<UserModel?>(
-                    hint: Text(LocaleKeys.set_session_dialog_assign_to.tr()),
-                    isExpanded: true,
-                    value: _formData["assignedTo"] == null
-                        ? null
-                        : widget.branch.users.firstWhere((element) =>
-                            element.uid == _formData["assignedTo"]),
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    items: [
-                      DropdownMenuItem(
-                        value: null,
-                        child: Text(
-                            LocaleKeys.set_session_dialog_not_assigned.tr()),
-                      ),
-                      ...widget.branch.users
-                          .map((e) => DropdownMenuItem(
-                                value: e,
-                                child: Text(e.displayName),
-                              ))
-                          .toList()
-                    ],
-                    onChanged: (user) {
-                      setState(() {
-                        _formData["assignedTo"] = user?.uid;
-                      });
-                    }),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<UserModel?>(
+                      hint: Text(LocaleKeys.set_session_dialog_assign_to.tr()),
+                      isExpanded: true,
+                      value: _formData["assignedTo"] == null
+                          ? null
+                          : widget.branch.users.firstWhere((element) =>
+                              element.uid == _formData["assignedTo"]),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      items: [
+                        DropdownMenuItem(
+                          value: null,
+                          child: ListTile(
+                            title: Text(LocaleKeys
+                                .set_session_dialog_not_assigned
+                                .tr()),
+                            leading: const Icon(Icons.not_interested),
+                          ),
+                        ),
+                        ...widget.branch.users
+                            .map((e) => DropdownMenuItem(
+                                  value: e,
+                                  child: ListTile(
+                                      title: Text(e.displayName),
+                                      leading: e.photoUrl.isEmpty
+                                          ? const Icon(Icons.person)
+                                          : ProfilePictureWidget(
+                                              photoUrl: e.photoUrl, size: 36)),
+                                ))
+                            .toList()
+                      ],
+                      onChanged: (user) {
+                        setState(() {
+                          _formData["assignedTo"] = user?.uid;
+                        });
+                      }),
+                ),
               ),
               Wrap(
                   spacing: 10,
