@@ -3,6 +3,11 @@ lib/firebase_options.dart
 /test/
 /firebase/
 /lib/product/constants/app_keys.dart
+
+## delete later
+/ios
+/android
+
 # Miscellaneous
 *.class
 *.log
