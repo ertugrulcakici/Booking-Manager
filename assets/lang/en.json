@@ -78,7 +78,15 @@
         "assigned_to": "Assigned to: {}",
         "last_modified_by": "Last modified by: {}"
     },
-    
+
+    "user_model": {
+        "deleted_user":"Deleted user"
+    },
+
+    "profile_picture_widget": {
+        "error_while_uploading_profile_picture":"An error occurred while uploading the profile picture:"
+    },
+
     "forgot_password": {
         "title": "Forgot Password",
         "email_label": "Your email address",
@@ -112,7 +120,17 @@
         "welcome": "Welcome \n{}",
         "email_copied": "Email address copied",
         "create_branch_dialog_title": "Create a new branch",
-        "your_email": "Your email address: {}"
+        "your_email": "Your email address: {}",
+        "account_will_be_deleted":"Your account will be deleted. This process cannot be taken back. You can  create a new account with the same information",
+        "account_deletion_failed":"An error occurred while deleting the account",
+        "delete_account":"Delete my account",
+        "camera":"Shot from camera",
+        "gallery":"Pick from gallery"
+    },
+
+    "profile_notifier":{
+        "profile_photo_changed_successfully":"Profile photo changed successfully",
+        "profile_photo_could_not_changed":"Profile photo could not be changed"
     },
     
     "register": {

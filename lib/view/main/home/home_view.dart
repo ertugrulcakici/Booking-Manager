@@ -16,7 +16,7 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 import '../../../core/services/firebase/auth/auth_service.dart';
 import '../../../core/services/navigation/navigation_service.dart';
 import '../../../product/models/branch_model.dart';
-import '../../../product/widgets/profile_picture.dart';
+import '../../../product/widgets/profile_picture_widget.dart';
 import '../../admin/branch_expenses/branch_expenses_view.dart';
 import '../../admin/branch_settings/branch_settings_view.dart';
 import '../../admin/branch_workers/branch_workers_view.dart';

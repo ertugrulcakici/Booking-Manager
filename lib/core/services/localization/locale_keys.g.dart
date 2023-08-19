@@ -100,6 +100,11 @@ abstract class LocaleKeys {
   static const session_model_last_modified_by =
       'session_model.last_modified_by';
   static const session_model = 'session_model';
+  static const user_model_deleted_user = 'user_model.deleted_user';
+  static const user_model = 'user_model';
+  static const profile_picture_widget_error_while_uploading_profile_picture =
+      'profile_picture_widget.error_while_uploading_profile_picture';
+  static const profile_picture_widget = 'profile_picture_widget';
   static const forgot_password_title = 'forgot_password.title';
   static const forgot_password_email_label = 'forgot_password.email_label';
   static const forgot_password_reset_button = 'forgot_password.reset_button';
@@ -133,7 +138,19 @@ abstract class LocaleKeys {
   static const profile_create_branch_dialog_title =
       'profile.create_branch_dialog_title';
   static const profile_your_email = 'profile.your_email';
+  static const profile_account_will_be_deleted =
+      'profile.account_will_be_deleted';
+  static const profile_account_deletion_failed =
+      'profile.account_deletion_failed';
+  static const profile_delete_account = 'profile.delete_account';
+  static const profile_camera = 'profile.camera';
+  static const profile_gallery = 'profile.gallery';
   static const profile = 'profile';
+  static const profile_notifier_profile_photo_changed_successfully =
+      'profile_notifier.profile_photo_changed_successfully';
+  static const profile_notifier_profile_photo_could_not_changed =
+      'profile_notifier.profile_photo_could_not_changed';
+  static const profile_notifier = 'profile_notifier';
   static const register_title = 'register.title';
   static const register_email_label = 'register.email_label';
   static const register_email_hint = 'register.email_hint';

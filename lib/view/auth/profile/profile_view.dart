@@ -1,5 +1,5 @@
 import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
-import 'package:bookingmanager/product/widgets/profile_picture.dart';
+import 'package:bookingmanager/product/widgets/profile_picture_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -77,6 +77,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                                 size: 100, color: Colors.grey)
                             : ProfilePictureWidget(
                                 size: 100,
+                                showError: true,
                                 photoUrl:
                                     AuthService.instance.userModel!.photoUrl),
                       )),
@@ -132,22 +133,19 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     );
   }
 
-  // TODO: localization
-
   Widget _deleteAccountButton() {
     return ElevatedButton(
       onPressed: () async {
         PopupHelper.showOkCancelDialog(
-            title: "Dikkat",
-            content:
-                "Hesabınız silinecek. Bu işlem geri alınamaz. Daha sonra aynı bilgiler ile yeni bir hesap oluşturabilirsiniz",
+            title: LocaleKeys.general_attention.tr(),
+            content: LocaleKeys.profile_account_will_be_deleted.tr(),
             onOk: () {
               try {
                 PopupHelper.showLoadingWhile(
                     () async => await AuthService.instance.deleteAccount());
               } catch (e) {
                 PopupHelper.showAnimatedInfoDialog(
-                    title: "Kullanıcı silme başarısız oldu",
+                    title: LocaleKeys.profile_account_deletion_failed.tr(),
                     isSuccessful: false);
               }
             });
@@ -157,12 +155,11 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
         fixedSize: Size(MediaQuery.sizeOf(context).width * 0.8, 50),
         foregroundColor: Colors.white,
       ),
-      child: const Text("Hesap sil"),
+      child: Text(LocaleKeys.profile_delete_account.tr()),
     );
   }
 
   void _showImagePicker() {
-    // TODO: localization
     showModalBottomSheet(
         context: context,
         builder: (context) {
@@ -170,7 +167,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
             padding: MediaQuery.paddingOf(context),
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               ListTile(
-                title: const Text("Kamera"),
+                title: Text(LocaleKeys.profile_camera.tr()),
                 trailing: const Icon(Icons.camera),
                 onTap: () {
                   Navigator.pop(context);
@@ -178,7 +175,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                 },
               ),
               ListTile(
-                title: const Text("Galeri"),
+                title: Text(LocaleKeys.profile_gallery.tr()),
                 trailing: const Icon(Icons.photo),
                 onTap: () {
                   Navigator.pop(context);

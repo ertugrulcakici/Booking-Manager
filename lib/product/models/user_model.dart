@@ -1,3 +1,6 @@
+import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 class UserModel {
   final String uid;
   final String displayName;
@@ -17,10 +20,9 @@ class UserModel {
     this.isDeleted = false,
   });
 
-  // TODO: localization
   UserModel.deletedUser()
       : uid = "",
-        displayName = "Silinmiş Kullanıcı",
+        displayName = LocaleKeys.user_model_deleted_user.tr(),
         email = "",
         ownersOf = [],
         workersOf = [],

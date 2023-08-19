@@ -78,6 +78,14 @@
         "assigned_to": "Přiřazeno k: {}",
         "last_modified_by": "Naposledy upraveno: {}"
     },
+
+    "user_model": {
+        "deleted_user":"Vymazaný uživatel"
+    },
+
+    "profile_picture_widget": {
+        "error_while_uploading_profile_picture":"Profil fotoğrafı yüklenirken hata oluştu"
+    },
     
     "forgot_password": {
         "title": "Zapomenuté Heslo",
@@ -112,7 +120,17 @@
         "welcome": "Vítejte \n{}",
         "email_copied": "E-mailová adresa byla zkopírována",
         "create_branch_dialog_title": "Vytvořte Novou Pobočku",
-        "your_email": "Vaše e-mailová adresa: {}"
+        "your_email": "Vaše e-mailová adresa: {}",
+        "account_will_be_deleted":"Váš účet bude smazán.Tento proces nelze vzít zpět.Poté můžete vytvořit nový účet se stejnými informacemi",
+        "account_deletion_failed":"Při smazání účtu došlo k chybě",
+        "delete_account":"Smazat můj účet",
+        "camera":"Střel z kamery",
+        "gallery":"Vyberte si z galerie"
+    },
+
+    "profile_notifier":{
+        "profile_photo_changed_successfully":"Profilová fotka se úspěšně změnila",
+        "profile_photo_could_not_changed":"Profilová fotografie nemohla být změněna"
     },
     
     "register": {

@@ -1,4 +1,6 @@
+import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/utils/popup_helper.dart';
@@ -56,9 +58,9 @@ class _ProfilePictureWidgetState extends State<ProfilePictureWidget> {
                 errorWidget: (context, error, stackTrace) {
                   if (widget.showError) {
                     PopupHelper.showSnackBar(
-                        message:
-                            //TODO localization
-                            "Profil fotoğrafı yüklenirken hata oluştu",
+                        message: LocaleKeys
+                            .profile_picture_widget_error_while_uploading_profile_picture
+                            .tr(),
                         error: true);
                   }
                   return retryButton();

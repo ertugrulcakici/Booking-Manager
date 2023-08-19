@@ -81,6 +81,13 @@
         "last_modified_by":"Son düzenleyen: {}"
     },
 
+    "user_model": {
+        "deleted_user":"Silinmiş kullanıcı"
+    },
+
+    "profile_picture_widget": {
+        "error_while_uploading_profile_picture":"Profil fotoğrafı yüklenirken hata oluştu"
+    },
 
     "forgot_password":{
         "title": "Şifremi Unuttum",
@@ -114,7 +121,18 @@
         "welcome":"Hoş geldin \n{}",
         "email_copied":"E-posta adresi kopyalandı",
         "create_branch_dialog_title":"Yeni bir iş yeri oluşturun",
-        "your_email":"E-posta adresiniz: {}"
+        "your_email":"E-posta adresiniz: {}",
+        "account_will_be_deleted":"Hesabınız silinecek. Bu işlem geri alınamaz. Daha sonra aynı bilgiler ile yeni bir hesap oluşturabilirsiniz",
+        "account_deletion_failed":"Hesap silinirken bir hata oluştu",
+        "delete_account":"Hesabımı sil",
+        "camera":"Kameradan çek",
+        "gallery":"Galeriden seç"
+    },
+    
+
+    "profile_notifier":{
+        "profile_photo_changed_successfully":"Profil fotoğrafı başarıyla değiştirildi",
+        "profile_photo_could_not_changed":"Profil fotoğrafı değiştirilemedi"
     },
 
     "register":{

@@ -1,7 +1,9 @@
 import 'dart:io';
 
 import 'package:bookingmanager/core/services/firebase/auth/auth_service.dart';
+import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,7 +23,6 @@ class ProfileNotifier extends ChangeNotifier {
   }
 
   Future<void> changePhoto(ImageSource source) async {
-    // TODO: localization
     try {
       final pickedFile = await picker.pickImage(
           source: source,
@@ -46,10 +47,13 @@ class ProfileNotifier extends ChangeNotifier {
         profilePhotoChanging = false;
       }).onError((error, stackTrace) => throw Exception(error));
       PopupHelper.showSnackBar(
-          message: "Profil fotoğrafı başarıyla değiştirildi");
+          message: LocaleKeys
+              .profile_notifier_profile_photo_changed_successfully
+              .tr());
     } catch (e) {
       PopupHelper.showAnimatedInfoDialog(
-          title: "Profil fotoğrafı değiştirme başarısız: $e",
+          title:
+              LocaleKeys.profile_notifier_profile_photo_could_not_changed.tr(),
           isSuccessful: false);
     }
   }

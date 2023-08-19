@@ -2,7 +2,7 @@ name: bookingmanager
 description: Booking Manager.
 
 publish_to: "none"
-version: 2.0.7+13
+version: 2.0.8+14
 
 environment:
   sdk: ">=3.0.2 <4.0.0"
