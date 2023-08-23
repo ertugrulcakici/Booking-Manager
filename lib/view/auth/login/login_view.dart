@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:bookingmanager/core/services/firebase/auth/auth_service.dart';
 import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
 import 'package:bookingmanager/core/services/navigation/navigation_service.dart';
@@ -32,6 +35,16 @@ class _LoginViewState extends State<LoginView> {
   @override
   void initState() {
     _formKey = GlobalKey<FormState>();
+
+    AppTrackingTransparency.requestTrackingAuthorization().then((value) {
+      log(value.toString());
+      if (value != TrackingStatus.authorized) {
+        Future.delayed(
+            const Duration(seconds: 1),
+            () async =>
+                await AppTrackingTransparency.requestTrackingAuthorization());
+      }
+    });
     super.initState();
   }
 
