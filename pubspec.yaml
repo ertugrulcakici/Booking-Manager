@@ -2,7 +2,7 @@ name: bookingmanager
 description: Booking Manager.
 
 publish_to: "none"
-version: 2.0.8+14
+version: 2.0.10+18
 
 environment:
   sdk: ">=3.0.2 <4.0.0"
@@ -25,6 +25,8 @@ dependencies:
   cached_network_image: ^3.2.3
   firebase_storage: ^11.2.6
   image_picker: ^1.0.2
+  app_tracking_transparency: ^2.0.4
+  firebase_messaging: ^14.6.6
 
 dev_dependencies:
   flutter_test:
