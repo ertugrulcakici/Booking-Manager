@@ -237,7 +237,7 @@ final class AuthService implements IAuthService {
   @override
   Future<void> deleteAccount() async {
     final uid = userModel!.uid;
-    await FirebaseAuth.instance.currentUser!.delete();
+    await FirebaseAuth.instance.currentUser?.delete();
     await FirebaseFirestore.instance.collection("users").doc(uid).delete();
   }
 }

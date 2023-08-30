@@ -38,7 +38,7 @@ class SessionModel {
   Future<String> get _subject async {
     String _ = "";
     if (name != null && name!.isNotEmpty) {
-      _ += "${LocaleKeys.session_model_name.tr(args: [name!])}\n";
+      _ += "${LocaleKeys.session_model_name.tr(args: [name!])}\n  ";
     }
     if (personCount > 0) {
       _ += "${LocaleKeys.session_model_person_count.tr(args: [

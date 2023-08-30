@@ -1,9 +1,8 @@
 lib/firebase_options.dart
-/media/private/
 /test/
 /firebase/
 /lib/product/constants/app_keys.dart
-
+/private/
 ## delete later
 /ios
 /android

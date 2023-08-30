@@ -1,3 +1,4 @@
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:bookingmanager/core/services/navigation/navigation_service.dart';
 import 'package:bookingmanager/firebase_options.dart';
 import 'package:bookingmanager/product/constants/app_constants.dart';
@@ -13,6 +14,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 Future<void> main() async {
   await initializeApp();
+
   runApp(EasyLocalization(
       supportedLocales: AppConstants.supportedLocales,
       path: AppConstants.pathLocale,
@@ -60,4 +62,5 @@ Future<void> initializeApp() async {
   await SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await EasyLocalization.ensureInitialized();
+  await AppTrackingTransparency.requestTrackingAuthorization();
 }
