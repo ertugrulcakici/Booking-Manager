@@ -25,8 +25,9 @@ dependencies:
   cached_network_image: ^3.2.3
   firebase_storage: ^11.2.6
   image_picker: ^1.0.2
-  app_tracking_transparency: ^2.0.4
   firebase_messaging: ^14.6.6
+  flutter_local_notifications: ^15.1.1
+  app_tracking_transparency: ^2.0.4
 
 dev_dependencies:
   flutter_test:

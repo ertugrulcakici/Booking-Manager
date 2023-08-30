@@ -1,4 +1,5 @@
 import 'package:bookingmanager/core/services/localization/locale_keys.g.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class UserModel {
@@ -9,6 +10,7 @@ class UserModel {
   final List<String> workersOf;
   String photoUrl = "";
   bool isDeleted = false;
+  final String? fcmToken;
 
   UserModel({
     required this.uid,
@@ -18,6 +20,7 @@ class UserModel {
     required this.workersOf,
     required this.photoUrl,
     this.isDeleted = false,
+    this.fcmToken,
   });
 
   UserModel.deletedUser()
@@ -27,7 +30,8 @@ class UserModel {
         ownersOf = [],
         workersOf = [],
         photoUrl = "",
-        isDeleted = true;
+        isDeleted = true,
+        fcmToken = "";
 
   toJson() {
     return {
@@ -37,6 +41,7 @@ class UserModel {
       "ownersOf": ownersOf,
       "workersOf": workersOf,
       "photoUrl": photoUrl,
+      "fcmToken": fcmToken
     };
   }
 
@@ -48,9 +53,24 @@ class UserModel {
       ownersOf: List<String>.from(json["ownersOf"]),
       workersOf: List<String>.from(json["workersOf"]),
       photoUrl: json["photoUrl"],
+      fcmToken: json["fcmToken"],
     );
   }
 
   @override
   String toString() => toJson().toString();
+
+  Future<void> updateFcmToken(String? fcmToken) async {
+    if (fcmToken == this.fcmToken) {
+      return;
+    }
+    try {
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(uid)
+          .update({"fcmToken": fcmToken});
+    } catch (e) {
+      // TODO: handle exception
+    }
+  }
 }
